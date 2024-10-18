@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -20,6 +21,10 @@ public class Publisher {
 
     @Column
     private String publisherName;
+
+    @OneToMany(mappedBy = "publisher")
+    @ToString.Exclude
+    private Set<Book> setOfBooks;
 
     @Embedded
     @AttributeOverrides({@AttributeOverride(name = "city", column = @Column(name = "PUBLISHER_ADDRESS")),

@@ -30,6 +30,10 @@ public class Book {
     @ToString.Exclude
     private Set<Author> setOfAuthors;
 
+    @ManyToOne
+    @JoinColumn(name = "PUBLISHER_ID", referencedColumnName = "PUBLISHER_ID")
+    private Publisher publisher;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

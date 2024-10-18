@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: demo
+  h2:
+    console:
+      enabled: true
+#  datasource:
+#    url: jdbc:oracle:thin:sh/sh@//localhost:1521/orclpdb
+#    username: sh
+#    password: tiger
+#    driverClassName: oracle.jdbc.OracleDriver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        highlight_sql: true
+#        dialect: org.hibernate.dialect.Oracle12cDialect
+#    database-platform: org.hibernate.dialect.OracleDialect
+logging:
+  level:
+    org:
+      hibernate:
+        orm:
+          jdbc:
+            bind: TRACE
