@@ -4,6 +4,9 @@ spring:
   h2:
     console:
       enabled: true
+  profiles:
+    active:
+      - prod
 #  datasource:
 #    url: jdbc:oracle:thin:sh/sh@//localhost:1521/orclpdb
 #    username: sh
@@ -24,3 +27,5 @@ logging:
         orm:
           jdbc:
             bind: TRACE
+faux:
+  datasource: dev-db
